@@ -1,0 +1,215 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+nav {
+  background-color: #3c6e71;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  color: #fff;
+  margin-right: auto;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffd700;
+}
+
+/* =========================
+   HEADER QUOTE
+========================= */
+#quote {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#quote-of-the-day {
+  font-style: italic;
+  color: #5f9ea0;
+  font-weight: bold;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #1d4ed8;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #1d4ed8;
+  margin: 20px 0 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   CONTAINERS & SECTIONS
+========================= */
+.container,
+section,
+.tools-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  background-color: #3c6e71;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   TILES & ICONS
+========================= */
+.tile,
+.tile-grid .tile,
+.icon-box {
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover,
+.icon-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   EMOJIS & BUTTONS
+========================= */
+.mood-btn {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.mood-btn:hover {
+  transform: scale(1.2);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ /* Icons section */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.icon-box {
+  text-align: center;
+  width: 120px; /* control overall icon box size */
+}
+
+.icon-box img {
+  width: 80px;   /* scale down image */
+  height: 80px;
+  object-fit: contain; /* keep proportions */
+  border-radius: 15px;  /* optional: round corners */
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-box img:hover {
+  transform: scale(1.1); /* small hover effect */
+}
+
+.icon-box p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+ 

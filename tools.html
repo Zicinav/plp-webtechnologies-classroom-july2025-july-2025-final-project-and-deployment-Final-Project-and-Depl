@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools - Umntwan'omntu Matters</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Breathing Circle Styles ===== */
+    .breathing-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 40px;
+    }
+    .breathing-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: lightblue;
+      transition: transform 4s ease-in-out;
+    }
+    .expand {
+      transform: scale(1.5);
+    }
+    .contract {
+      transform: scale(1);
+    }
+    .breathing-controls button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #52a1e2;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .breathing-controls button:hover {
+      background-color: #40698d;
+    }
+
+    /* Simple responsive containers */
+    .tools-section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .mood-btn {
+      font-size: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      transition: transform 0.2s ease;
+    }
+    .mood-btn:hover {
+      transform: scale(1.2);
+    }
+    #mood-log, #gratitudeOutput, #timer-display {
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .journal-entry {
+      background: #f0f0f0;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>Umntwan'omntu Matters</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="tools.html" class="active">Tools</a></li>
+      </ul>
+    </nav>
+    <section id="quote">
+      <h2>Quote of the Day</h2>
+      <p id="quote-of-the-day">Loading quote...</p>
+    </section>
+  </header>
+
+  <main>
+    <!-- Mood Tracker -->
+    <section class="tools-section" id="mood-tracker">
+      <h2>Mood Tracker</h2>
+      <p>How are you feeling today?</p>
+      <div>
+        <button class="mood-btn" data-mood="😊">😊</button>
+        <button class="mood-btn" data-mood="😐">😐</button>
+        <button class="mood-btn" data-mood="😢">😢</button>
+        <button class="mood-btn" data-mood="😡">😡</button>
+        <button class="mood-btn" data-mood="😎">😎</button>
+      </div>
+      <p id="mood-log"></p>
+    </section>
+
+    <!-- Gratitude Journal -->
+    <section class="tools-section" id="gratitude-journal">
+      <h2>Gratitude Journal</h2>
+      <p>What are you thankful for today?</p>
+      <textarea id="journal-entry" rows="4" placeholder="Write here..."></textarea>
+      <button id="saveEntry">Save Entry</button>
+      <div id="gratitudeOutput"></div>
+      <div id="entries"></div>
+    </section>
+
+    <!-- Meditation Timer -->
+    <section class="tools-section" id="meditation-timer">
+      <h2>Meditation Timer</h2>
+      <label for="duration">Duration (minutes): </label>
+      <input type="number" id="duration" min="1" value="5" />
+      <button id="start-timer">Start Timer</button>
+      <div id="timer-display"></div>
+    </section>
+
+    <!-- Box Breathing -->
+    <section class="tools-section" id="breathing">
+      <h2>Box Breathing Exercise</h2>
+      <p id="breathing-instruction">Click 'Start' to begin</p>
+      <div class="breathing-container">
+        <div class="breathing-circle"></div>
+        <div class="breathing-controls">
+          <button id="start-breathing">Start</button>
+          <button id="stop-breathing">Stop</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Umntwan'omntu Matters</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="tools.js"></script>
+</body>
+</html>
