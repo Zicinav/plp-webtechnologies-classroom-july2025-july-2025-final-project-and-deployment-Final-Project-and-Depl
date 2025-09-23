@@ -64,7 +64,8 @@ Deploy your project and confirm that:
 
 * All links and scripts work
 * It loads properly on mobile and desktop
-* It has a clear, shareable URL
+* It has a clear, shareable URL  https://umntwanomntu.netlify.app/
+  
 
 **Goal:** Publish your work online and make it accessible to the world.
 
